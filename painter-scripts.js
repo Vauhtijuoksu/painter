@@ -61,7 +61,7 @@ const apply = () => {
     height: ih * s - 2 * peek + 'px',
   });
 };
-const released = ['a18k2m9x4'];
+const released = ['a18k2m9x4', 'a2n3d3u6'];
 let current, pic = { w: 1, h: 1 };
 const refit = () => {
   const fw = frame.clientWidth, fh = frame.clientHeight;
