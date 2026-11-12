@@ -64,6 +64,8 @@ const apply = () => {
 //////////////// ADD NEW IMAGES NAME HERE //////////////////////
 const released = [
   'etsierot',
+  'aivopahkina1',
+  'aivopahkina2',
   'persoonallisuustesti',
   'juomatpulma',
   'horoskooppi',
@@ -78,6 +80,8 @@ const released = [
 ];
 const titles = {
   "etsierot": "Etsi eroavaisuudet",
+  "aivopahkina1": "Aivopähkinät 1/2",
+  "aivopahkina2": "Aivopähkinät 2/2",
   "juomatpulma": "Pillimehusokkelo",
   "persoonallisuustesti": "Persoonallisuustesti",
   "horoskooppi": "Horoskooppi",
