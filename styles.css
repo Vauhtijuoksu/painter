@@ -193,3 +193,23 @@ canvas {
     line-height: 40px;
   }
 }
+#print-out {
+  display: none;
+}
+@media print {
+  body {
+    display: block;
+    height: auto;
+    padding: 0;
+    background: none;
+  }
+  body > * {
+    display: none !important;
+  }
+  #print-out {
+    display: block !important;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+  }
+}

@@ -91,7 +91,7 @@ const titles = {
   "riddles": "Arvoituksia"
 }
 ////////////////////////////////////////////////////////////////
-let current, pic = { w: 1, h: 1 };
+let current, pic = { w: 1, h: 1 }, picImg;
 const refit = () => {
   const fw = frame.clientWidth, fh = frame.clientHeight;
   if (!fw || !fh) return;
@@ -209,6 +209,7 @@ const showImage = id => {
   img.onload = () => {
     current = id;
     pic = { w: img.naturalWidth, h: img.naturalHeight };
+    picImg = img;
     history.replaceState(null, '', '?p=' + id);
     nav.hidden = released.length < 2 || !released.includes(id);
     clearInterval(ticker);
@@ -232,5 +233,15 @@ const step = d => showImage(released[(released.indexOf(current) + d + released.l
 document.getElementById('prev').onclick = () => step(-1);
 document.getElementById('next').onclick = () => step(1);
 showImage(new URLSearchParams(location.search).get('p') || released[0]);
+
+const printOut = document.getElementById('print-out');
+document.getElementById('print').onclick = () => {
+  if (!cover.hidden) return;
+  const { w, h } = pic, p = printOut.getContext('2d');
+  printOut.width = w; printOut.height = h;
+  p.drawImage(picImg, 0, 0);
+  p.drawImage(c, (c.width - w) / 2, (c.height - h) / 2, w, h, 0, 0, w, h);
+  print();
+};
 
 document.addEventListener('touchstart', () => {}, { passive: true });
