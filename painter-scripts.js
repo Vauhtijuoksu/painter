@@ -62,7 +62,34 @@ const apply = () => {
   });
 };
 //////////////// ADD NEW IMAGES NAME HERE //////////////////////
-const released = ['a18k2m9x4', 'wtf'];
+const released = [
+  'etsierot',
+  'persoonallisuustesti',
+  'juomatpulma',
+  'horoskooppi',
+  'slotinpyora',
+  'teleporttisokkelo',
+  'ristikko',
+  'sanahaku',
+  'sanasokkelo',
+  'anagrammi',
+  'riddles',
+  'maze'
+];
+const titles = {
+  "etsierot": "Etsi eroavaisuudet",
+  "juomatpulma": "Pillimehusokkelo",
+  "persoonallisuustesti": "Persoonallisuustesti",
+  "horoskooppi": "Horoskooppi",
+  "slotinpyora": "Oulu pilalla",
+  "teleporttisokkelo": "Hurja lapyrintti",
+  "sanasokkelo": "Sanasokkelo",
+  "ristikko": "Ristikko",
+  "maze": "Metroidvania-labyrintti",
+  "sanahaku": "Sanahaku",
+  "anagrammi": "Anagrammi",
+  "riddles": "Arvoituksia"
+}
 ////////////////////////////////////////////////////////////////
 let current, pic = { w: 1, h: 1 };
 const refit = () => {
@@ -175,6 +202,7 @@ frame.addEventListener('wheel', e => {
 }, { passive: false });
 
 const nav = document.getElementById('nav');
+const titleDiv = document.getElementById('title');
 const showImage = id => {
   const img = new Image();
   img.onerror = () => id !== released[0] && showImage(released[0]);
@@ -191,6 +219,11 @@ const showImage = id => {
     ctx.clearRect(0, 0, c.width, c.height);
     undoStack.length = 0;
     c.style.backgroundImage = `url('${img.src}')`;
+    if (id in titles){
+      titleDiv.innerText = titles[id]
+    } else {
+      titleDiv.innerText = "?"
+    }
     refit();
   };
   img.src = 'imgs/' + id + '.png';
