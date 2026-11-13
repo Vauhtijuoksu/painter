@@ -68,15 +68,15 @@ const released = [
   'aivopahkina2',
   'persoonallisuustesti',
   'horoskooppi',
+  'maze',
+  'sanasokkelo',
   'juomatpulma',
   'slotinpyora',
   'teleporttisokkelo',
   'ristikko',
   'sanahaku',
-  'sanasokkelo',
   'anagrammi',
   'riddles',
-  'maze'
 ];
 const titles = {
   "etsierot": "Etsi eroavaisuudet",
