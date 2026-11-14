@@ -70,12 +70,12 @@ const released = [
   'horoskooppi',
   'maze',
   'sanasokkelo',
-  'juomatpulma',
-  'slotinpyora',
   'teleporttisokkelo',
   'ristikko',
-  'sanahaku',
   'anagrammi',
+  'juomatpulma',
+  'sanahaku',
+  'slotinpyora',
   'riddles',
 ];
 const titles = {
