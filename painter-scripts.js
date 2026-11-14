@@ -74,9 +74,10 @@ const released = [
   'ristikko_lr',
   'anagrammi',
   'juomatpulma',
-  'sanahaku',
+  'taydennapiirustus1',
+  'taydennapiirustus2',
+  'taydennapiirustus3',
   'slotinpyora',
-  'riddles',
 ];
 const titles = {
   "etsierot": "Etsi eroavaisuudet",
@@ -86,6 +87,9 @@ const titles = {
   "persoonallisuustesti": "Persoonallisuustesti",
   "horoskooppi": "Horoskooppi",
   "slotinpyora": "Oulu pilalla",
+  "taydenapirustus1": "Täydennä piirustus 1/3",
+  "taydenapirustus2": "Täydennä piirustus 2/3",
+  "taydenapirustus3": "Täydennä piirustus 3/3",
   "teleporttisokkelo": "Hurja lapyrintti",
   "sanasokkelo": "Sanasokkelo",
   "ristikko_lr": "Ristikko",
